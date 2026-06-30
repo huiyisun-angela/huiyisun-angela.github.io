@@ -54,42 +54,106 @@
       </div>
     </section>
 
-    <!-- Section 2: Welcome + 3 intro columns -->
+    <!-- Section 2: Welcome — photo left, text columns right -->
     <section class="welcome panel-section" id="welcome">
       <div class="container">
         <h2 class="section-title-center">Welcome To My Site</h2>
-        <div class="intro-grid">
-          <article class="intro-card">
-            <h3 class="intro-heading">About Me</h3>
-            <p>In this section, you can get to know me, my background, my interests, and what fuels my passion for analytics — from econometrics at UIUC to business analytics at USC Marshall.</p>
-          </article>
-          <article class="intro-card">
-            <h3 class="intro-heading">My Experience</h3>
-            <p>Here's a breakdown of my professional journey, including consulting at FACES, economics tutoring, internships, and leadership roles across campus organizations.</p>
-          </article>
-          <article class="intro-card">
-            <h3 class="intro-heading">Projects</h3>
-            <p>Take a look at some of my favorite projects, where I blend data with storytelling — from machine learning and NLP to SQL presentations and product case competitions.</p>
-          </article>
+        <div class="welcome-layout">
+          <div class="welcome-photo">
+            <div class="welcome-photo-frame">
+              <div class="welcome-photo-placeholder">AS</div>
+            </div>
+          </div>
+          <div class="welcome-columns">
+            <article class="intro-card intro-card--stacked">
+              <h3 class="intro-heading">About Me</h3>
+              <p>In this section, you can get to know me, my background, my interests, and what fuels my passion for analytics — from econometrics at UIUC to business analytics at USC Marshall.</p>
+            </article>
+            <article class="intro-card intro-card--stacked">
+              <h3 class="intro-heading">My Experience</h3>
+              <p>Here's a breakdown of my professional journey, including consulting at FACES, economics tutoring, internships, and leadership roles across campus organizations.</p>
+            </article>
+            <article class="intro-card intro-card--stacked">
+              <h3 class="intro-heading">Projects</h3>
+              <p>Take a look at some of my favorite projects, where I blend data with storytelling — from machine learning and NLP to SQL presentations and product case competitions.</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 3: Experience highlights (Marcus-style stacked blocks) -->
-    <section class="highlights-stack panel-section" id="highlights">
+    <!-- Section 3: Experience — horizontal timeline -->
+    <section class="experience-timeline" id="highlights">
       <div class="container">
-        <article class="highlight-block">
-          <h2 class="highlight-title">AI Case Competition Semi-Finalist</h2>
-          <p>Led a cross-functional team to design an all-in-one shared calendar app for USC students, integrating academic and social scheduling with AI-assisted prototyping and user-driven product features.</p>
-        </article>
-        <article class="highlight-block">
-          <h2 class="highlight-title">USC Marshall Masters in Business Analytics</h2>
-          <p>Current second-year Master of Science in Business Analytics (MSBA) student at USC Marshall, expected graduation Dec 2026, with a focus on data-driven decision making.</p>
-        </article>
-        <article class="highlight-block">
-          <h2 class="highlight-title">CSSA Vice President of Events</h2>
-          <p>Directed Spring Gala showcases for four consecutive semesters, engaging 600+ attendees and coordinating 300+ performers and volunteers across large-scale cultural events.</p>
-        </article>
+        <h2 class="timeline-section-title">Experience</h2>
+      </div>
+      <div class="timeline-h-scroll">
+        <div class="timeline-h-track">
+          <div class="timeline-h-line" aria-hidden="true"></div>
+          <div class="timeline-h-year timeline-h-year--start"><span>2022</span></div>
+
+          <article class="timeline-h-card timeline-h-card--top">
+            <span class="timeline-badge">Student Club</span>
+            <h3 class="timeline-role">Social Media Director</h3>
+            <p class="timeline-org">MIMOSA Dance Crew</p>
+            <div class="timeline-meta">
+              <span>📅 2022.01 – 2023.05</span>
+              <span>📍 Champaign, IL</span>
+            </div>
+          </article>
+
+          <article class="timeline-h-card timeline-h-card--bottom">
+            <span class="timeline-badge">Student Club</span>
+            <h3 class="timeline-role">Vice President of Events</h3>
+            <p class="timeline-org">UIUC CSSA</p>
+            <div class="timeline-meta">
+              <span>📅 2022.08 – 2025.05</span>
+              <span>📍 Champaign, IL</span>
+            </div>
+          </article>
+
+          <article class="timeline-h-card timeline-h-card--top">
+            <span class="timeline-badge">Consulting</span>
+            <h3 class="timeline-role">Consultant</h3>
+            <p class="timeline-org">FACES Consulting</p>
+            <div class="timeline-meta">
+              <span>📅 2023.01 – 2024.12</span>
+              <span>📍 Champaign, IL</span>
+            </div>
+          </article>
+
+          <article class="timeline-h-card timeline-h-card--bottom">
+            <span class="timeline-badge">Internship</span>
+            <h3 class="timeline-role">Intern</h3>
+            <p class="timeline-org">Xi'an Fengmao Jiacheng Industrial</p>
+            <div class="timeline-meta">
+              <span>📅 2023.05 – 2023.08</span>
+              <span>📍 Shaanxi, China</span>
+            </div>
+          </article>
+
+          <article class="timeline-h-card timeline-h-card--top">
+            <span class="timeline-badge">Part-Time</span>
+            <h3 class="timeline-role">ECON Tutor</h3>
+            <p class="timeline-org">ECON Tutor Center, UIUC</p>
+            <div class="timeline-meta">
+              <span>📅 2024.02 – 2024.05</span>
+              <span>📍 Champaign, IL</span>
+            </div>
+          </article>
+
+          <article class="timeline-h-card timeline-h-card--bottom">
+            <span class="timeline-badge">Competition</span>
+            <h3 class="timeline-role">Semi-Finalist · Team Lead</h3>
+            <p class="timeline-org">AI Case Competition</p>
+            <div class="timeline-meta">
+              <span>📅 2025.09</span>
+              <span>📍 Los Angeles, CA</span>
+            </div>
+          </article>
+
+          <div class="timeline-h-year timeline-h-year--end"><span>2025</span></div>
+        </div>
       </div>
     </section>
 
