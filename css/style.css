@@ -383,19 +383,19 @@ p {
   background: var(--accent-light);
 }
 
-.project-thumb--dashboard {
+.project-thumb--insurance {
   background: linear-gradient(135deg, #E8F4FC 0%, #B8D9F0 100%);
 }
 
-.project-thumb--permits {
+.project-thumb--trojansync {
   background: linear-gradient(135deg, #E8F4FC 0%, #A8CCE8 100%);
 }
 
-.project-thumb--supply {
+.project-thumb--sql {
   background: linear-gradient(135deg, #E8F4FC 0%, #9EC4E4 100%);
 }
 
-.project-thumb--tarot {
+.project-thumb--nlp {
   background: linear-gradient(135deg, #E8F4FC 0%, #C5DFF0 100%);
 }
 
