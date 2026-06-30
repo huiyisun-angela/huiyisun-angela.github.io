@@ -410,19 +410,28 @@ p {
   letter-spacing: 0.04em;
 }
 
+.timeline-hint {
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.04em;
+}
+
 .timeline-h-scroll {
   overflow-x: auto;
-  padding: 0 1rem 1rem;
+  padding: 0 1rem 1.5rem;
   -webkit-overflow-scrolling: touch;
 }
 
 .timeline-h-track {
   display: flex;
   align-items: center;
-  gap: 0;
   min-width: max-content;
-  padding: 8rem 2rem 8rem;
+  min-height: 380px;
+  padding: 0 2rem;
   position: relative;
+  gap: 0.5rem;
 }
 
 .timeline-h-line {
@@ -430,10 +439,11 @@ p {
   left: 2rem;
   right: 2rem;
   top: 50%;
-  height: 3px;
+  height: 4px;
   background: #9ec4b0;
   transform: translateY(-50%);
   z-index: 0;
+  border-radius: 2px;
 }
 
 .timeline-h-year {
@@ -452,35 +462,50 @@ p {
   color: #1e3347;
   z-index: 2;
   position: relative;
-  align-self: center;
 }
 
-.timeline-h-year--start {
-  margin-right: 1.5rem;
+.timeline-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 240px;
+  flex-shrink: 0;
+  height: 340px;
+  z-index: 1;
 }
 
-.timeline-h-year--end {
-  margin-left: 1.5rem;
+.timeline-col--top {
+  justify-content: flex-end;
+}
+
+.timeline-col--bottom {
+  justify-content: flex-start;
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #9ec4b0;
+  border: 3px solid #fff;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.timeline-connector {
+  width: 3px;
+  height: 28px;
+  background: #9ec4b0;
+  flex-shrink: 0;
 }
 
 .timeline-h-card {
   position: relative;
-  flex: 0 0 280px;
+  width: 100%;
   background: #fff;
-  border-radius: 16px;
-  padding: 1.25rem 1.25rem 1rem;
-  margin: 0 0.75rem;
-  box-shadow: 6px 6px 0 #9ec4b0;
-  z-index: 1;
-  align-self: center;
-}
-
-.timeline-h-card--top {
-  transform: translateY(-5.5rem);
-}
-
-.timeline-h-card--bottom {
-  transform: translateY(5.5rem);
+  border-radius: 14px;
+  padding: 1rem 1rem 0.85rem;
+  box-shadow: 5px 5px 0 #9ec4b0;
 }
 
 .timeline-badge {
@@ -536,51 +561,58 @@ p {
 
 .project-cards-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  max-width: 680px;
+  margin-inline: auto;
 }
 
 .project-card {
   background: var(--surface-solid);
-  border-radius: var(--radius);
-  padding: 1.75rem 1.5rem;
-  box-shadow: 0 8px 24px rgba(60, 100, 140, 0.1);
+  border-radius: 16px;
+  padding: 1.25rem 1.1rem;
+  box-shadow: 0 6px 18px rgba(60, 100, 140, 0.1);
   display: flex;
   flex-direction: column;
 }
 
 .project-card-icon {
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: var(--accent);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.85rem;
 }
 
 .project-card-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
 }
 
 .project-card-title {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.5rem;
   color: var(--text);
 }
 
 .project-card p {
   color: var(--text-muted);
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 400;
-  line-height: 1.55;
-  margin: 0 0 1.25rem;
+  line-height: 1.5;
+  margin: 0 0 0.85rem;
   flex-grow: 1;
+}
+
+.project-tags li {
+  font-size: 0.625rem;
+  padding: 0.25rem 0.6rem;
 }
 
 .project-tags {
@@ -795,25 +827,6 @@ p {
     margin-inline: auto;
   }
 
-  .timeline-h-card--top,
-  .timeline-h-card--bottom {
-    transform: none;
-  }
-
-  .timeline-h-track {
-    padding: 3rem 2rem;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-  }
-
-  .timeline-h-line {
-    display: none;
-  }
-
-  .project-cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .education-layout {
     grid-template-columns: 1fr;
   }
@@ -825,6 +838,15 @@ p {
 }
 
 @media (max-width: 640px) {
+  .timeline-col {
+    width: 220px;
+    height: 300px;
+  }
+
+  .timeline-h-card {
+    padding: 0.85rem;
+  }
+
   .project-cards-grid {
     grid-template-columns: 1fr;
   }
