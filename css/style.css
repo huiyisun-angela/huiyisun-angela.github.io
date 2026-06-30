@@ -10,6 +10,7 @@
   --border: rgba(180, 210, 235, 0.6);
   --radius: 20px;
   --container: 960px;
+  --container-wide: 1140px;
   --section-pad: clamp(4rem, 8vw, 6rem);
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "Outfit", system-ui, sans-serif;
@@ -49,6 +50,11 @@ a {
 
 .container {
   width: min(var(--container), 100% - 2.5rem);
+  margin-inline: auto;
+}
+
+.container-wide {
+  width: min(var(--container-wide), 100% - 2.5rem);
   margin-inline: auto;
 }
 
@@ -369,41 +375,200 @@ p {
   margin: 0;
 }
 
-/* Section 4: Featured projects — stacked */
-.featured-list {
+/* Section 4: Featured projects — card grid */
+.projects {
+  background: #b8d4e8;
+}
+
+.project-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.project-card {
+  background: var(--surface-solid);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 8px 24px rgba(60, 100, 140, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  max-width: 760px;
-  margin-inline: auto;
 }
 
-.featured-item {
-  text-align: center;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid var(--border);
+.project-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
 }
 
-.featured-item:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
+.project-card-icon svg {
+  width: 20px;
+  height: 20px;
 }
 
-.featured-title {
-  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
-  font-weight: 600;
+.project-card-title {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
   margin: 0 0 0.75rem;
+  color: var(--text);
 }
 
-.featured-item p {
+.project-card p {
   color: var(--text-muted);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.55;
+  margin: 0 0 1.25rem;
+  flex-grow: 1;
+}
+
+.project-tags {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.project-tags li {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.3rem 0.75rem;
+  background: #eef3f7;
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.project-card-link {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--accent-deep);
+  text-decoration: none;
+}
+
+.project-card-link:hover {
+  text-decoration: underline;
+}
+
+.projects .section-title-center {
+  color: var(--text);
+}
+
+/* Section 5: Education — two columns */
+.education-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  min-height: 480px;
+}
+
+.education-photos {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.75rem;
+  padding: 1.5rem;
+}
+
+.edu-photo {
+  border-radius: 4px;
+  background-size: cover;
+  background-position: center;
+  min-height: 180px;
+}
+
+.edu-photo--top {
+  background: linear-gradient(135deg, #8aabcc 0%, #6a8fad 100%);
+}
+
+.edu-photo--bottom {
+  background: linear-gradient(135deg, #a8c4dc 0%, #7a9fbf 100%);
+}
+
+.education-content {
+  background: #f3f6f0;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 4vw, 3rem);
+}
+
+.education-heading {
+  font-family: var(--font-body);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8cb896;
+  margin: 0 0 2rem;
+}
+
+.edu-entry {
+  margin-bottom: 2rem;
+}
+
+.edu-entry:last-child {
+  margin-bottom: 0;
+}
+
+.edu-school {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #2d4a66;
+  margin: 0 0 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+.edu-chevron {
+  color: #2d4a66;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.edu-degree {
+  font-family: var(--font-body);
   font-size: 0.9375rem;
-  font-weight: 300;
-  line-height: 1.65;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  color: var(--text);
+}
+
+.edu-meta {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
   margin: 0 0 0.75rem;
 }
 
-/* Section 5: Contact */
+.edu-subhead {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+  color: var(--text);
+}
+
+.edu-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.edu-list li {
+  margin-bottom: 0.2rem;
+}
+
+/* Section 6: Contact */
 .schedule-inner {
   text-align: center;
   max-width: 560px;
@@ -433,42 +598,6 @@ p {
 
 .contact-links a:hover {
   color: var(--accent-deep);
-}
-
-/* Section 6: FAQ */
-.faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.faq-item {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 0 1.25rem;
-  backdrop-filter: blur(8px);
-}
-
-.faq-item summary {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 1.1rem 0;
-  cursor: pointer;
-  list-style: none;
-}
-
-.faq-item summary::-webkit-details-marker {
-  display: none;
-}
-
-.faq-item p {
-  color: var(--text-muted);
-  font-size: 0.9375rem;
-  font-weight: 300;
-  padding-bottom: 1.25rem;
-  margin: 0;
 }
 
 /* Footer */
@@ -507,9 +636,30 @@ p {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
+
+  .project-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .education-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .education-photos {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
 }
 
 @media (max-width: 640px) {
+  .project-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-photos {
+    grid-template-columns: 1fr;
+  }
+
   .nav-toggle {
     display: flex;
   }
