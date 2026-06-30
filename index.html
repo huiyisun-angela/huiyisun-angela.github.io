@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Huiyi (Angela) Sun — MSBA candidate at USC Marshall. Business analytics, data science, and portfolio projects.">
-  <title>Huiyi (Angela) Sun | Portfolio</title>
+  <meta name="description" content="Angela Sun — MSBA candidate at USC Marshall. Business analytics, data science, and portfolio projects.">
+  <title>Angela Sun | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -20,28 +20,27 @@
 
   <header class="site-header" id="top">
     <nav class="nav container">
-      <a href="#top" class="nav-logo">angela sun</a>
+      <a href="#top" class="nav-logo">Angela Sun</a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <li><a href="#welcome">About</a></li>
+        <li><a href="#highlights">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
+    <!-- Section 1: Hero -->
+    <section class="hero" id="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <h1 class="hero-title">Hey, I'm Angela</h1>
-          <p class="hero-tagline">I'm a Business Analytics / Data Science Professional.</p>
-          <p class="hero-location">Located in Los Angeles, CA</p>
+          <h1 class="hero-title">Hey, I'm Angela Sun</h1>
+          <p class="hero-subtitle">I'm a Business Analytics / Data Science Professional. Located in Los Angeles, CA</p>
           <div class="hero-actions">
             <a href="#contact" class="btn btn-hero">Work with Me</a>
             <a href="resume/Huiyi_Angela_Sun_Resume_2026.pdf" class="btn btn-hero-outline" download>Download Resume</a>
@@ -55,133 +54,113 @@
       </div>
     </section>
 
-    <section class="intro panel-section" id="about">
-      <div class="container intro-grid">
-        <article class="glass-card intro-card">
-          <p class="section-label">About Me</p>
-          <h2>Background &amp; Interests</h2>
-          <p>I'm a second-year MSBA student at USC Marshall with a foundation in econometrics from UIUC. I enjoy turning raw data into clear stories — from dashboards and market research to supply chain optimization.</p>
-          <a href="#about-detail" class="text-link">Learn more ↓</a>
-        </article>
-        <article class="glass-card intro-card">
-          <p class="section-label">Experience</p>
-          <h2>Professional Journey</h2>
-          <p>From consulting at FACES to tutoring economics and interning in industrial analytics, I've built skills in Python, SQL, Tableau, and cross-functional teamwork.</p>
-          <a href="#experience" class="text-link">See highlights ↓</a>
-        </article>
-        <article class="glass-card intro-card">
-          <p class="section-label">Projects</p>
-          <h2>Featured Work</h2>
-          <p>Selected coursework and team projects — machine learning, NLP, SQL, and product case competitions on GitHub.</p>
-          <a href="#projects" class="text-link">Browse projects ↓</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="about-detail panel-section" id="about-detail">
-      <div class="container narrow glass-card panel-card">
-        <p class="section-label">About</p>
-        <h2>Welcome to My Site</h2>
-        <p class="lead">I combine analytical rigor with clear communication — whether building dashboards, running market analysis, or leading campus events for 600+ attendees.</p>
-        <div class="skills">
-          <span class="skill-pill">Python</span>
-          <span class="skill-pill">R</span>
-          <span class="skill-pill">SQL</span>
-          <span class="skill-pill">Tableau</span>
-          <span class="skill-pill">Excel</span>
-          <span class="skill-pill">Streamlit</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="highlights panel-section" id="experience">
+    <!-- Section 2: Welcome + 3 intro columns -->
+    <section class="welcome panel-section" id="welcome">
       <div class="container">
-        <div class="section-header">
-          <p class="section-label">Experience</p>
-          <h2>Highlights</h2>
-        </div>
-        <div class="highlights-grid">
-          <article class="glass-card highlight-card">
-            <h3>AI Case Competition Semi-Finalist</h3>
-            <p>Led a cross-functional team to design an all-in-one shared calendar app with AI-assisted prototyping and user-driven product features.</p>
+        <h2 class="section-title-center">Welcome To My Site</h2>
+        <div class="intro-grid">
+          <article class="intro-card">
+            <h3 class="intro-heading">About Me</h3>
+            <p>In this section, you can get to know me, my background, my interests, and what fuels my passion for analytics — from econometrics at UIUC to business analytics at USC Marshall.</p>
           </article>
-          <article class="glass-card highlight-card">
-            <h3>USC Marshall MSBA</h3>
-            <p>Master of Science in Business Analytics, expected graduation Dec 2026. Focus on data-driven decision making and analytics engineering.</p>
+          <article class="intro-card">
+            <h3 class="intro-heading">My Experience</h3>
+            <p>Here's a breakdown of my professional journey, including consulting at FACES, economics tutoring, internships, and leadership roles across campus organizations.</p>
           </article>
-          <article class="glass-card highlight-card">
-            <h3>CSSA Vice President of Events</h3>
-            <p>Directed Spring Gala showcases for four semesters, engaging 600+ attendees and coordinating 300+ performers and volunteers.</p>
-          </article>
-          <article class="glass-card highlight-card">
-            <h3>FACES Consulting</h3>
-            <p>Produced 10+ market analysis reports with Excel, Power BI, and Tableau — delivering insights on consumer and competitor behavior.</p>
+          <article class="intro-card">
+            <h3 class="intro-heading">Projects</h3>
+            <p>Take a look at some of my favorite projects, where I blend data with storytelling — from machine learning and NLP to SQL presentations and product case competitions.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="projects panel-section" id="projects">
+    <!-- Section 3: Experience highlights (Marcus-style stacked blocks) -->
+    <section class="highlights-stack panel-section" id="highlights">
       <div class="container">
-        <div class="section-header">
-          <p class="section-label">Projects</p>
-          <h2>Featured Work</h2>
-        </div>
-        <div class="projects-grid">
-          <article class="glass-card project-card">
-            <div class="project-thumb project-thumb--insurance" aria-hidden="true"></div>
-            <div class="project-body">
-              <h3>Optimizing Insurance Risk via ML</h3>
-              <p>Machine learning analysis of insurance risk using patient health and demographic data. Python code coming soon.</p>
-              <a href="https://github.com/huiyisun-angela/insurance-ml-risk" class="text-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
-            </div>
+        <article class="highlight-block">
+          <h2 class="highlight-title">AI Case Competition Semi-Finalist</h2>
+          <p>Led a cross-functional team to design an all-in-one shared calendar app for USC students, integrating academic and social scheduling with AI-assisted prototyping and user-driven product features.</p>
+        </article>
+        <article class="highlight-block">
+          <h2 class="highlight-title">USC Marshall Masters in Business Analytics</h2>
+          <p>Current second-year Master of Science in Business Analytics (MSBA) student at USC Marshall, expected graduation Dec 2026, with a focus on data-driven decision making.</p>
+        </article>
+        <article class="highlight-block">
+          <h2 class="highlight-title">CSSA Vice President of Events</h2>
+          <p>Directed Spring Gala showcases for four consecutive semesters, engaging 600+ attendees and coordinating 300+ performers and volunteers across large-scale cultural events.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 4: Featured Projects -->
+    <section class="projects panel-section section-alt" id="projects">
+      <div class="container">
+        <h2 class="section-title-center section-title-large">Featured Projects</h2>
+        <div class="featured-list">
+          <article class="featured-item">
+            <h3 class="featured-title">Optimizing Insurance Risk via Machine Learning</h3>
+            <p>Machine learning analysis of insurance risk using patient health and demographic data — feature engineering, model comparison, and risk classification. Python code coming soon.</p>
+            <a href="https://github.com/huiyisun-angela/insurance-ml-risk" class="text-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
           </article>
-          <article class="glass-card project-card">
-            <div class="project-thumb project-thumb--trojansync" aria-hidden="true"></div>
-            <div class="project-body">
-              <h3>TrojanSync</h3>
-              <p>AI Case Competition semi-finalist: all-in-one shared calendar app for USC students. Team project with pitch deck.</p>
-              <a href="https://github.com/huiyisun-angela/trojansync" class="text-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
-            </div>
+          <article class="featured-item">
+            <h3 class="featured-title">TrojanSync — Sync Smarter, Collaborate Easier</h3>
+            <p>AI Case Competition semi-finalist project: an all-in-one shared calendar app for USC students with scheduling automation, team calendars, and social activity planning.</p>
+            <a href="https://github.com/huiyisun-angela/trojansync" class="text-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
           </article>
-          <article class="glass-card project-card">
-            <div class="project-thumb project-thumb--sql" aria-hidden="true"></div>
-            <div class="project-body">
-              <h3>SQL Presentation</h3>
-              <p>Slide deck covering SQL fundamentals and analytical query techniques for business analytics.</p>
-              <a href="https://github.com/huiyisun-angela/sql-presentation" class="text-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
-            </div>
+          <article class="featured-item">
+            <h3 class="featured-title">NLPioneers — Natural Language Processing</h3>
+            <p>Team NLP project exploring natural language processing methods and applications for text analytics. Python code coming soon.</p>
+            <a href="https://github.com/huiyisun-angela/nlpioneers" class="text-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
           </article>
-          <article class="glass-card project-card">
-            <div class="project-thumb project-thumb--nlp" aria-hidden="true"></div>
-            <div class="project-body">
-              <h3>NLPioneers</h3>
-              <p>Team NLP project exploring natural language processing methods. Python code coming soon.</p>
-              <a href="https://github.com/huiyisun-angela/nlpioneers" class="text-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
-            </div>
+          <article class="featured-item">
+            <h3 class="featured-title">SQL Presentation — Analytical Query Techniques</h3>
+            <p>Slide deck covering SQL fundamentals, joins, aggregations, and analytical query techniques for business analytics workflows.</p>
+            <a href="https://github.com/huiyisun-angela/sql-presentation" class="text-link" target="_blank" rel="noopener noreferrer">View on GitHub →</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="contact panel-section" id="contact">
-      <div class="container narrow glass-card panel-card contact-inner">
-        <p class="section-label">Contact</p>
-        <h2>Let's Connect</h2>
-        <p class="lead">Open to analytics roles, collaborations, and coffee chats in Los Angeles.</p>
+    <!-- Section 5: Schedule / Contact -->
+    <section class="schedule panel-section" id="contact">
+      <div class="container schedule-inner">
+        <h2 class="section-title-center">Schedule Time!</h2>
+        <p class="schedule-lead">Schedule a coffee chat with me — I'm open to analytics roles, collaborations, and conversations in Los Angeles.</p>
+        <a href="mailto:angelahuiyis@gmail.com" class="btn btn-primary">Contact Me</a>
         <ul class="contact-links">
           <li><a href="mailto:angelahuiyis@gmail.com">angelahuiyis@gmail.com</a></li>
           <li><a href="https://linkedin.com/in/huiyisun" target="_blank" rel="noopener noreferrer">linkedin.com/in/huiyisun</a></li>
           <li><a href="https://github.com/huiyisun-angela" target="_blank" rel="noopener noreferrer">github.com/huiyisun-angela</a></li>
         </ul>
-        <a href="resume/Huiyi_Angela_Sun_Resume_2026.pdf" class="btn btn-primary" download>Download Resume</a>
+      </div>
+    </section>
+
+    <!-- Section 6: FAQ -->
+    <section class="faq panel-section section-alt" id="faq">
+      <div class="container narrow">
+        <h2 class="section-title-center">FAQ</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What is my favorite part of analytics?</summary>
+            <p>I really enjoy building dashboards and visualizations — turning raw data into something meaningful and easy to understand. There's something satisfying about seeing patterns click in a way that helps people make smarter decisions.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why did I get into analytics?</summary>
+            <p>I got into analytics through economics and econometrics at UIUC, where I learned how numbers could tell a deeper story about markets and behavior. That curiosity led me to pursue an MSBA at USC Marshall.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What is my favorite project I've done?</summary>
+            <p>My favorite project so far is the TrojanSync case competition — it combined product thinking, teamwork, and analytics in a real-world challenge, and we reached the semi-finals with a product I'm genuinely proud of.</p>
+          </details>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 Huiyi (Angela) Sun</p>
+      <p>&copy; 2026 Angela Sun. My Story, My Work.</p>
     </div>
   </footer>
 
