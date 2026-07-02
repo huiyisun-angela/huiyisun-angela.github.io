@@ -341,18 +341,18 @@ p {
 
 .welcome-layout {
   display: grid;
-  grid-template-columns: minmax(200px, 280px) 1fr;
+  grid-template-columns: minmax(260px, 340px) 1fr;
   gap: clamp(1.25rem, 3vw, 2rem);
   align-items: center;
 }
 
 .welcome-photo-frame {
-  border-radius: 1.25rem;
+  border-radius: 1.35rem;
   overflow: hidden;
   aspect-ratio: 3 / 4;
   width: 100%;
-  max-width: 280px;
-  box-shadow: 0 12px 32px rgba(44, 62, 80, 0.1);
+  max-width: 340px;
+  box-shadow: 0 14px 36px rgba(44, 62, 80, 0.12);
 }
 
 .welcome-photo-placeholder {
