@@ -405,6 +405,19 @@ p {
   margin: 0;
 }
 
+.intro-card-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--accent-deep);
+  text-decoration: none;
+}
+
+.intro-card-link:hover {
+  text-decoration: underline;
+}
+
 /* Section 3: Experience — horizontal timeline */
 .experience-timeline {
   background: linear-gradient(135deg, #2d4a66 0%, #1e3347 100%);
@@ -928,6 +941,27 @@ p {
   }
 }
 
+/* Subpages — shared page shell */
+.page-about,
+.page-experience,
+.page-projects,
+.page-contact {
+  min-height: 100vh;
+}
+
+.page-title,
+.experience-v-title,
+.projects-showcase-title {
+  font-family: var(--font-body);
+  font-size: clamp(2.5rem, 6vw, 3.75rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin: 0;
+  line-height: 1;
+}
+
 /* Experience page — vertical timeline */
 .experience-v-page {
   padding: clamp(2.5rem, 6vw, 4rem) 0 clamp(4rem, 8vw, 6rem);
@@ -942,17 +976,6 @@ p {
 .experience-v-header {
   margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
   padding-left: 0.25rem;
-}
-
-.experience-v-title {
-  font-family: var(--font-body);
-  font-size: clamp(2.5rem, 6vw, 3.75rem);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent-deep);
-  margin: 0;
-  line-height: 1;
 }
 
 .experience-v-timeline {
@@ -1156,17 +1179,6 @@ p {
   padding-left: 0.25rem;
 }
 
-.projects-showcase-title {
-  font-family: var(--font-body);
-  font-size: clamp(2.5rem, 6vw, 3.75rem);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent-deep);
-  margin: 0;
-  line-height: 1;
-}
-
 .projects-showcase-list {
   display: flex;
   flex-direction: column;
@@ -1335,6 +1347,12 @@ p {
 .contact-page-inner {
   max-width: 920px;
   text-align: center;
+}
+
+.contact-page-header {
+  margin-bottom: clamp(2rem, 4vw, 2.75rem);
+  text-align: left;
+  padding-left: 0.25rem;
 }
 
 .contact-intro {
