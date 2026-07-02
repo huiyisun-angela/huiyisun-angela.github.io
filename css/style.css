@@ -1043,20 +1043,39 @@ p {
   margin-top: 0;
 }
 
-.experience-v-year-marker {
+.experience-v-marker {
   grid-column: 2;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.4rem;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 1.25rem;
+}
+
+.experience-v-year-label {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 1rem;
+}
+
+.experience-v-item--left .experience-v-year-label {
+  grid-column: 3;
+  justify-content: flex-start;
+  padding-left: 0.75rem;
+}
+
+.experience-v-item--right .experience-v-year-label {
+  grid-column: 1;
+  justify-content: flex-end;
+  padding-right: 0.75rem;
 }
 
 .experience-v-year {
   font-family: var(--font-body);
-  font-size: 0.9375rem;
-  font-weight: 600;
+  font-size: clamp(1.125rem, 2.2vw, 1.375rem);
+  font-weight: 700;
   color: var(--accent-deep);
   letter-spacing: 0.04em;
+  line-height: 1;
 }
 
 .experience-v-node {
@@ -1173,14 +1192,13 @@ p {
     grid-template-columns: 36px 1fr;
   }
 
-  .experience-v-year-marker {
+  .experience-v-marker {
     grid-column: 1;
-    flex-direction: row;
-    gap: 0.65rem;
+    padding-top: 0;
   }
 
-  .experience-v-year {
-    margin: 0;
+  .experience-v-year-label {
+    display: none;
   }
 
   .experience-v-item--left .experience-v-card,
