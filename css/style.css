@@ -329,25 +329,30 @@ p {
 }
 
 /* Section 2: Welcome — photo left, stacked text right */
+.welcome.panel-section {
+  padding: clamp(2rem, 4vw, 2.75rem) 0;
+}
+
 .welcome .section-title-center {
   color: #1a2a38;
-  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  margin-bottom: clamp(1.25rem, 2.5vw, 1.75rem);
 }
 
 .welcome-layout {
   display: grid;
-  grid-template-columns: minmax(240px, 360px) 1fr;
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: start;
+  grid-template-columns: minmax(200px, 280px) 1fr;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  align-items: center;
 }
 
 .welcome-photo-frame {
-  border-radius: 1.5rem;
+  border-radius: 1.25rem;
   overflow: hidden;
   aspect-ratio: 3 / 4;
   width: 100%;
-  max-width: 360px;
-  box-shadow: 0 16px 40px rgba(44, 62, 80, 0.12);
+  max-width: 280px;
+  box-shadow: 0 12px 32px rgba(44, 62, 80, 0.1);
 }
 
 .welcome-photo-placeholder {
@@ -375,19 +380,47 @@ p {
 .welcome-columns {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
-  padding-top: 0.5rem;
+  gap: 1.1rem;
+  padding-top: 0;
 }
 
 .intro-card--stacked {
   text-align: left;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid var(--border);
 }
 
 .intro-card--stacked:last-child {
   border-bottom: none;
   padding-bottom: 0;
+}
+
+.welcome .intro-heading {
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+  color: #1a2a38;
+}
+
+.welcome .intro-card--stacked p {
+  color: #243547;
+  font-size: clamp(0.8125rem, 1.3vw, 0.9375rem);
+  font-weight: 400;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.welcome .intro-card-link {
+  display: inline-block;
+  margin-top: 0.45rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--accent-deep);
+  text-decoration: none;
+}
+
+.welcome .intro-card-link:hover {
+  text-decoration: underline;
 }
 
 .intro-heading {
